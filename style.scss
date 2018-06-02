@@ -33,7 +33,7 @@ body {
         flex-wrap: wrap;
         margin: 0 8rem;
         cursor: pointer;
-        
+
         i {
             position: relative;
             width: 4rem;
@@ -45,7 +45,7 @@ body {
             position: relative;
             width: 100%;
             height: 100%;
-            animation: div-animation 4s ease-in-out forwards infinite;
+            animation: div-animation 4s ease-in-out forwards 1.333;
             
             @keyframes div-animation {
                 0% {
@@ -72,6 +72,8 @@ body {
                 height: 100%;
                 list-style: none;   
                 font-family: 'Space Mono', monospace;
+                font-size: 1.125rem;
+                text-transform: uppercase;
                 font-style: normal;
                 color: #fff;
                 @extend %flex-center;
