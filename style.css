@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; }
+
+.main, .main__content i li {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: #161616; }
+  .main__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 8rem;
+    cursor: pointer; }
+    .main__content i {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border: 1px solid #161616;
+      overflow: hidden; }
+      .main__content i div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        animation: div-animation 4s ease-in-out forwards infinite; }
+@keyframes div-animation {
+  0% {
+    top: 0; }
+  33% {
+    top: 4rem; }
+  66% {
+    top: 8rem; }
+  100% {
+    top: 8rem; } }
+      .main__content i li {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        font-family: 'Space Mono', monospace;
+        font-style: normal;
+        color: #fff;
+        background: rebeccapurple; }
+        .main__content i li:first-child {
+          top: -4rem;
+          background: pink; }
+        .main__content i li:nth-child(2) {
+          top: -8rem;
+          background: rebeccapurple; }
+
+i:nth-child(1) div {
+  animation-delay: 0.1s; }
+
+i:nth-child(1) div li:nth-child(1) {
+  background: #cd3768; }
+i:nth-child(1) div li:nth-child(2),
+i:nth-child(1) div li:nth-child(3) {
+  background: #6352cb; }
+
+i:nth-child(2) div {
+  animation-delay: 0.2s; }
+
+i:nth-child(2) div li:nth-child(1) {
+  background: #cf3f6e; }
+i:nth-child(2) div li:nth-child(2),
+i:nth-child(2) div li:nth-child(3) {
+  background: #5c4ac8; }
+
+i:nth-child(3) div {
+  animation-delay: 0.3s; }
+
+i:nth-child(3) div li:nth-child(1) {
+  background: #d14774; }
+i:nth-child(3) div li:nth-child(2),
+i:nth-child(3) div li:nth-child(3) {
+  background: #5543c6; }
+
+i:nth-child(4) div {
+  animation-delay: 0.4s; }
+
+i:nth-child(4) div li:nth-child(1) {
+  background: #d34f7a; }
+i:nth-child(4) div li:nth-child(2),
+i:nth-child(4) div li:nth-child(3) {
+  background: #4e3bc3; }
+
+i:nth-child(5) div {
+  animation-delay: 0.5s; }
+
+i:nth-child(5) div li:nth-child(1) {
+  background: #d55780; }
+i:nth-child(5) div li:nth-child(2),
+i:nth-child(5) div li:nth-child(3) {
+  background: #4b39bb; }
+
+i:nth-child(6) div {
+  animation-delay: 0.6s; }
+
+i:nth-child(6) div li:nth-child(1) {
+  background: #d75f87; }
+i:nth-child(6) div li:nth-child(2),
+i:nth-child(6) div li:nth-child(3) {
+  background: #4836b3; }
+
+i:nth-child(7) div {
+  animation-delay: 0.7s; }
+
+i:nth-child(7) div li:nth-child(1) {
+  background: #d9678d; }
+i:nth-child(7) div li:nth-child(2),
+i:nth-child(7) div li:nth-child(3) {
+  background: #4534ac; }
+
+i:nth-child(8) div {
+  animation-delay: 0.8s; }
+
+i:nth-child(8) div li:nth-child(1) {
+  background: palevioletred; }
+i:nth-child(8) div li:nth-child(2),
+i:nth-child(8) div li:nth-child(3) {
+  background: #4232a4; }
+
+/*# sourceMappingURL=style.css.map */

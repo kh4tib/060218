@@ -1,0 +1,114 @@
+// Global Styles
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+// Placeholders
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// Main Styles
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    @extend %flex-center;
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 8rem;
+        cursor: pointer;
+        
+        i {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid #161616;
+            overflow: hidden;
+
+            div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            animation: div-animation 4s ease-in-out forwards infinite;
+            
+            @keyframes div-animation {
+                0% {
+                    top: 0;
+                }
+
+                33% {
+                    top: 4rem;
+                }
+
+                66% {
+                    top: 8rem;
+                }
+
+                100% {
+                    top: 8rem;
+                }
+            }
+        }
+
+            li {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                list-style: none;   
+                font-family: 'Space Mono', monospace;
+                font-style: normal;
+                color: #fff;
+                @extend %flex-center;
+                background: rebeccapurple;
+
+                &:first-child {
+                    top: -4rem;
+                    background: pink;
+
+                }
+
+                &:nth-child(2) {
+                    top: -8rem;
+                    background: rebeccapurple;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 8 {
+    i:nth-child(#{$i}) {
+        div {
+            animation-delay: $i * .1s;
+        }
+    }
+
+    i:nth-child(#{$i}) {
+        div {
+            li:nth-child(1) {
+                background: lighten($color: #c73263, $amount: $i*2);
+            }
+            
+            li:nth-child(2),
+            li:nth-child(3) {
+                background: darken($color: slateblue, $amount: $i*2);
+            }
+        }
+    }
+}
